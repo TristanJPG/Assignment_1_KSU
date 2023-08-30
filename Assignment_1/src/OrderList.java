@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Objects;
+
 
 public class OrderList {
     private Order[] orderList = new Order[0];
@@ -76,7 +76,7 @@ public class OrderList {
     }
     public String printOrder(int id) {
         for (int i = 0; i < orderList.length; i++) {
-            if (id == orderList[i].getId() && orderList[i] != null) {
+            if (orderList[i] != null && id == orderList[i].getId()) {
                 return orderList[i].toString();
             }
         }
